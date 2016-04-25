@@ -1,0 +1,979 @@
+###############################################################################
+#
+# IAR ELF Linker V7.20.1.7305/W32 for ARM                 25/Apr/2016  11:40:06
+# Copyright 2007-2014 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Exe\mpgl2.out
+#    Map file     =  
+#        C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\List\mpgl2.map
+#    Command line =  
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\ant.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\ant_api.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\board_cstartup_iar.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\buttons.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\captouch.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\core_cm3.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\debug.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\exceptions.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\interrupts.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\lcd_bitmaps.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\lcd_NHD-C12864LZ.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\leds.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\libraries\captouch\bin\libsam3u-32qt-k-8rs-iar.a"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\main.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\messaging.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\mpgl2-ehdw-02.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\sam3u_i2c.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\sam3u_ssp.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\sam3u_uart.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\shooter-game.o"
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Obj\utilities.o" --redirect
+#        _Printf=_PrintfTiny --redirect _Scanf=_ScanfSmallNoMb -o
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\Exe\mpgl2.out" --map
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\List\mpgl2.map" --log
+#        initialization,modules,sections --log_file
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\Debug\List\mpgl2.log" --config
+#        "C:\Users\Jonathan\Desktop\Shooter
+#        Game\firmware_mpgl2\iar_7_20_1\..\..\firmware_mpg_common\sam3u2-flash.icf"
+#        --semihosting --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__Heap_Handler  = Basic
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x00080000 { ro section .intvec };
+"P1":  place in [from 0x00080000 to 0x0009ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x20003fff] { rw, block HEAP };
+"P3":  place in [from 0x20080000 to 0x20083fff] { block CSTACK };
+
+  Section             Kind        Address    Size  Object
+  -------             ----        -------    ----  ------
+"A1":                                        0xbc
+  .intvec                      0x00080000    0xbc  <Block>
+    .intvec           const    0x00080000    0xbc  board_cstartup_iar.o [1]
+                             - 0x000800bc    0xbc
+
+"P1":                                      0x6e8b
+  .text               ro code  0x000800bc   0xe3e  ant.o [1]
+  .text               ro code  0x00080efa    0x3e  exceptions.o [1]
+  .text               ro code  0x00080f38    0x3c  utilities.o [1]
+  .text               ro code  0x00080f74    0x76  ABImemcpy_unaligned.o [5]
+  .text               ro code  0x00080fea    0x22  zero_init3.o [5]
+  .text               ro code  0x0008100c   0x6a4  debug.o [1]
+  .text               ro code  0x000816b0   0x8d0  sam3u_ssp.o [1]
+  .text               ro code  0x00081f80    0xb0  xxmemxmalloc.o [3]
+  .text               ro code  0x00082030    0x80  xxmemxfree.o [3]
+  .text               ro code  0x000820b0   0x29c  messaging.o [1]
+  .text               ro code  0x0008234c   0x578  sam3u_uart.o [1]
+  .text               ro code  0x000828c4   0x290  leds.o [1]
+  .text               ro code  0x00082b54    0x66  ABImemset.o [5]
+  .rodata             const    0x00082bba     0x2  debug.o [1]
+  .text               ro code  0x00082bbc    0x2c  xgetmemchunk.o [3]
+  .text               ro code  0x00082be8   0x958  lcd_NHD-C12864LZ.o [1]
+  .text               ro code  0x00083540    0x36  strlen.o [5]
+  .text               ro code  0x00083578   0x8b8  shooter-game.o [1]
+  .text               ro code  0x00083e30    0xe0  rand.o [3]
+  .text               ro code  0x00083f10   0x2a4  buttons.o [1]
+  .text               ro code  0x000841b4   0x264  captouch.o [1]
+  .text               ro code  0x00084418   0x3c4  mpgl2-ehdw-02.o [1]
+  .text               ro code  0x000847dc     0x2  xtls.o [3]
+  SAM_QTOUCH          ro code  0x000847e0   0x20c  touch_api.o [4]
+  SAM_QTOUCH          ro code  0x000849ec   0x360  touch_rs_qt.o [4]
+  SAM_QTOUCH          ro code  0x00084d4c   0x444  touch_process.o [4]
+  SAM_QTOUCH          ro code  0x00085190    0x60  touch_burst_qt.o [4]
+  .text               ro code  0x000851f0   0x600  sam3u_i2c.o [1]
+  SAM_QTOUCH          ro code  0x000857f0   0x4d0  burst_10_AA_BB.o [4]
+  .rodata             const    0x00085cc0   0x2a0  lcd_bitmaps.o [1]
+  .text               ro code  0x00085f60   0x1dc  interrupts.o [1]
+  .text               ro code  0x0008613c   0x1c2  lz77_init.o [5]
+  .text               ro code  0x000862fe     0x6  abort.o [3]
+  .text               ro code  0x00086304    0x14  exit.o [6]
+  .rodata             const    0x00086318   0x160  lcd_bitmaps.o [1]
+  SAM_QTOUCH          ro code  0x00086478   0x148  calc_masks.o [4]
+  .rodata             const    0x000865c0   0x118  lcd_bitmaps.o [1]
+  .text               ro code  0x000866d8    0xbc  main.o [1]
+  .rodata             const    0x00086794    0x48  debug.o [1]
+  .rodata             const    0x000867dc    0x3c  debug.o [1]
+  .rodata             const    0x00086818    0x2c  ant.o [1]
+  .text               ro code  0x00086844    0x28  data_init.o [5]
+  .rodata             const    0x0008686c    0x24  ant.o [1]
+  .rodata             const    0x00086890    0x24  captouch.o [1]
+  .rodata             const    0x000868b4    0x24  debug.o [1]
+  .rodata             const    0x000868d8    0x24  debug.o [1]
+  .rodata             const    0x000868fc    0x24  debug.o [1]
+  .rodata             const    0x00086920    0x24  debug.o [1]
+  .rodata             const    0x00086944    0x24  debug.o [1]
+  .rodata             const    0x00086968    0x24  debug.o [1]
+  .rodata             const    0x0008698c    0x24  debug.o [1]
+  .rodata             const    0x000869b0    0x24  debug.o [1]
+  .rodata             const    0x000869d4    0x24  debug.o [1]
+  .iar.init_table     const    0x000869f8    0x2c  - Linker created -
+  .rodata             const    0x00086a24    0x20  interrupts.o [1]
+  .rodata             const    0x00086a44    0x20  sam3u_uart.o [1]
+  .rodata             const    0x00086a64    0x1c  ant.o [1]
+  .rodata             const    0x00086a80    0x1c  debug.o [1]
+  .rodata             const    0x00086a9c    0x1c  debug.o [1]
+  .text               ro code  0x00086ab8    0x1a  cmain.o [5]
+  .text               ro code  0x00086ad4    0x14  board_cstartup_iar.o [1]
+  .text               ro code  0x00086ae8     0x4  exit.o [3]
+  .text               ro code  0x00086aec     0xa  cexit.o [5]
+  .rodata             const    0x00086af8    0x18  ant.o [1]
+  .rodata             const    0x00086b10    0x18  ant.o [1]
+  .rodata             const    0x00086b28    0x18  captouch.o [1]
+  .rodata             const    0x00086b40    0x18  shooter-game.o [1]
+  .rodata             const    0x00086b58    0x18  shooter-game.o [1]
+  .rodata             const    0x00086b70    0x18  shooter-game.o [1]
+  .rodata             const    0x00086b88    0x14  ant.o [1]
+  .rodata             const    0x00086b9c    0x14  ant.o [1]
+  .rodata             const    0x00086bb0    0x14  ant.o [1]
+  .rodata             const    0x00086bc4    0x14  captouch.o [1]
+  .rodata             const    0x00086bd8    0x10  captouch.o [1]
+  .rodata             const    0x00086be8    0x10  shooter-game.o [1]
+  .rodata             const    0x00086bf8    0x10  shooter-game.o [1]
+  .rodata             const    0x00086c08     0xc  captouch.o [1]
+  .rodata             const    0x00086c14     0xc  debug.o [1]
+  .rodata             const    0x00086c20     0xc  debug.o [1]
+  .rodata             const    0x00086c2c     0xc  shooter-game.o [1]
+  .rodata             const    0x00086c38     0xc  shooter-game.o [1]
+  .text               ro code  0x00086c44     0xc  cstartup_M.o [5]
+  .rodata             const    0x00086c50     0x8  ant.o [1]
+  .rodata             const    0x00086c58     0x8  buttons.o [1]
+  .rodata             const    0x00086c60     0x8  debug.o [1]
+  .rodata             const    0x00086c68     0x4  shooter-game.o [1]
+  .rodata             const    0x00086c6c     0x4  shooter-game.o [1]
+  .rodata             const    0x00086c70     0x4  shooter-game.o [1]
+  .rodata             const    0x00086c74     0x4  shooter-game.o [1]
+  .rodata             const    0x00086c78     0x4  shooter-game.o [1]
+  .rodata             const    0x00086c7c     0x4  shooter-game.o [1]
+  .rodata             const    0x00086c80     0x4  shooter-game.o [1]
+  .rodata             const    0x00086c84     0x4  shooter-game.o [1]
+  .rodata             const    0x00086c88     0x4  shooter-game.o [1]
+  .rodata             const    0x00086c8c     0x0  zero_init3.o [5]
+  .rodata             const    0x00086c8c     0x0  lz77_init.o [5]
+  Initializer bytes   ro data  0x00086c8c   0x2bb  <for P2 s0>
+                             - 0x00086f47  0x6e8b
+
+"P2":                                      0x3d70
+  P2 s0                        0x20000000   0x47e  <Init block>
+    __DLIB_PERTHREAD  inited   0x20000000    0x8c  rand.o [3]
+    .data             inited   0x2000008c    0x84  leds.o [1]
+    .data             inited   0x20000110    0x50  ant.o [1]
+    .data             inited   0x20000160    0x44  debug.o [1]
+    .data             inited   0x200001a4    0x40  ant.o [1]
+    .data             inited   0x200001e4    0x40  debug.o [1]
+    .data             inited   0x20000224    0x34  leds.o [1]
+    .data             inited   0x20000258    0x20  ant.o [1]
+    .data             inited   0x20000278    0x20  ant.o [1]
+    .data             inited   0x20000298    0x20  debug.o [1]
+    .data             inited   0x200002b8    0x20  mpgl2-ehdw-02.o [1]
+    .data             inited   0x200002d8    0x1c  ant.o [1]
+    .data             inited   0x200002f4    0x18  ant.o [1]
+    .data             inited   0x2000030c    0x18  ant.o [1]
+    .data             inited   0x20000324    0x18  debug.o [1]
+    .data             inited   0x2000033c    0x18  leds.o [1]
+    .data             inited   0x20000354    0x18  sam3u_ssp.o [1]
+    .data             inited   0x2000036c    0x18  sam3u_ssp.o [1]
+    .data             inited   0x20000384    0x14  ant.o [1]
+    .data             inited   0x20000398    0x14  ant.o [1]
+    .data             inited   0x200003ac    0x14  ant.o [1]
+    .data             inited   0x200003c0    0x14  buttons.o [1]
+    .data             inited   0x200003d4    0x14  debug.o [1]
+    .data             inited   0x200003e8    0x10  ant.o [1]
+    .data             inited   0x200003f8    0x10  captouch.o [1]
+    .data             inited   0x20000408     0xc  lcd_NHD-C12864LZ.o [1]
+    .data             inited   0x20000414     0xc  lcd_NHD-C12864LZ.o [1]
+    .data             inited   0x20000420     0xc  lcd_NHD-C12864LZ.o [1]
+    .data             inited   0x2000042c     0x8  ant.o [1]
+    .data             inited   0x20000434     0x8  ant.o [1]
+    .data             inited   0x2000043c     0x8  debug.o [1]
+    .data             inited   0x20000444     0x8  lcd_NHD-C12864LZ.o [1]
+    .data             inited   0x2000044c     0x8  utilities.o [1]
+    .data             inited   0x20000454     0x8  utilities.o [1]
+    .data             inited   0x2000045c     0x4  buttons.o [1]
+    .data             inited   0x20000460     0x4  debug.o [1]
+    .data             inited   0x20000464     0x4  messaging.o [1]
+    .data             inited   0x20000468     0x4  shooter-game.o [1]
+    .data             inited   0x2000046c     0x4  shooter-game.o [1]
+    .data             inited   0x20000470     0x4  shooter-game.o [1]
+    .data             inited   0x20000474     0x2  interrupts.o [1]
+    .data             inited   0x20000476     0x2  shooter-game.o [1]
+    .data             inited   0x20000478     0x2  shooter-game.o [1]
+    .data             inited   0x2000047a     0x2  shooter-game.o [1]
+    .data             inited   0x2000047c     0x1  debug.o [1]
+    .data             inited   0x2000047d     0x1  touch_api.o [4]
+  .bss                zero     0x20000480   0x900  messaging.o [1]
+  .bss                zero     0x20000d80   0x400  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001180   0x300  messaging.o [1]
+  .bss                zero     0x20001480   0x100  ant.o [1]
+  .bss                zero     0x20001580   0x100  sam3u_i2c.o [1]
+  .bss                zero     0x20001680   0x100  touch_process.o [4]
+  .bss                zero     0x20001780    0x90  touch_api.o [4]
+  .bss                zero     0x20001810    0x80  debug.o [1]
+  .bss                zero     0x20001890    0x80  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001910    0x80  sam3u_ssp.o [1]
+  .bss                zero     0x20001990    0x40  debug.o [1]
+  .bss                zero     0x200019d0    0x34  sam3u_ssp.o [1]
+  .bss                zero     0x20001a04    0x34  sam3u_ssp.o [1]
+  .bss                zero     0x20001a38    0x34  sam3u_ssp.o [1]
+  .bss                zero     0x20001a6c    0x28  touch_rs_qt.o [4]
+  .bss                zero     0x20001a94    0x24  ant.o [1]
+  .bss                zero     0x20001ab8    0x24  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001adc    0x24  sam3u_uart.o [1]
+  .bss                zero     0x20001b00    0x24  sam3u_uart.o [1]
+  .bss                zero     0x20001b24    0x24  sam3u_uart.o [1]
+  .bss                zero     0x20001b48    0x24  sam3u_uart.o [1]
+  .bss                zero     0x20001b6c    0x24  touch_process.o [4]
+  .bss                zero     0x20001b90    0x20  touch_burst_qt.o [4]
+  .bss                zero     0x20001bb0    0x14  touch_api.o [4]
+  .bss                zero     0x20001bc4    0x10  sam3u_i2c.o [1]
+  .bss                zero     0x20001bd4     0xc  ant.o [1]
+  .bss                zero     0x20001be0     0xc  ant.o [1]
+  .bss                zero     0x20001bec     0x8  buttons.o [1]
+  .bss                zero     0x20001bf4     0x8  buttons.o [1]
+  .bss                zero     0x20001bfc     0x8  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001c04     0x8  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001c0c     0x8  xxmemxmalloc.o [3]
+  .bss                zero     0x20001c14     0x4  ant.o [1]
+  .bss                zero     0x20001c18     0x4  ant.o [1]
+  .bss                zero     0x20001c1c     0x4  ant.o [1]
+  .bss                zero     0x20001c20     0x4  ant.o [1]
+  .bss                zero     0x20001c24     0x4  ant.o [1]
+  .bss                zero     0x20001c28     0x4  ant.o [1]
+  .bss                zero     0x20001c2c     0x4  ant.o [1]
+  .bss                zero     0x20001c30     0x4  ant.o [1]
+  .bss                zero     0x20001c34     0x4  ant.o [1]
+  .bss                zero     0x20001c38     0x4  ant.o [1]
+  .bss                zero     0x20001c3c     0x4  ant.o [1]
+  .bss                zero     0x20001c40     0x4  ant.o [1]
+  .bss                zero     0x20001c44     0x4  ant.o [1]
+  .bss                zero     0x20001c48     0x4  ant.o [1]
+  .bss                zero     0x20001c4c     0x4  ant.o [1]
+  .bss                zero     0x20001c50     0x4  ant.o [1]
+  .bss                zero     0x20001c54     0x4  ant.o [1]
+  .bss                zero     0x20001c58     0x4  ant.o [1]
+  .bss                zero     0x20001c5c     0x4  ant.o [1]
+  .bss                zero     0x20001c60     0x4  buttons.o [1]
+  .bss                zero     0x20001c64     0x4  captouch.o [1]
+  .bss                zero     0x20001c68     0x4  captouch.o [1]
+  .bss                zero     0x20001c6c     0x4  captouch.o [1]
+  .bss                zero     0x20001c70     0x4  debug.o [1]
+  .bss                zero     0x20001c74     0x4  debug.o [1]
+  .bss                zero     0x20001c78     0x4  debug.o [1]
+  .bss                zero     0x20001c7c     0x4  debug.o [1]
+  .bss                zero     0x20001c80     0x4  debug.o [1]
+  .bss                zero     0x20001c84     0x4  debug.o [1]
+  .bss                zero     0x20001c88     0x4  debug.o [1]
+  .bss                zero     0x20001c8c     0x4  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001c90     0x4  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001c94     0x4  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001c98     0x4  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001c9c     0x4  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001ca0     0x4  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001ca4     0x4  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001ca8     0x4  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001cac     0x4  main.o [1]
+  .bss                zero     0x20001cb0     0x4  main.o [1]
+  .bss                zero     0x20001cb4     0x4  messaging.o [1]
+  .bss                zero     0x20001cb8     0x4  messaging.o [1]
+  .bss                zero     0x20001cbc     0x4  messaging.o [1]
+  .bss                zero     0x20001cc0     0x4  messaging.o [1]
+  .bss                zero     0x20001cc4     0x4  mpgl2-ehdw-02.o [1]
+  .bss                zero     0x20001cc8     0x4  mpgl2-ehdw-02.o [1]
+  .bss                zero     0x20001ccc     0x4  mpgl2-ehdw-02.o [1]
+  .bss                zero     0x20001cd0     0x4  mpgl2-ehdw-02.o [1]
+  .bss                zero     0x20001cd4     0x4  sam3u_i2c.o [1]
+  .bss                zero     0x20001cd8     0x4  sam3u_i2c.o [1]
+  .bss                zero     0x20001cdc     0x4  sam3u_i2c.o [1]
+  .bss                zero     0x20001ce0     0x4  sam3u_i2c.o [1]
+  .bss                zero     0x20001ce4     0x4  sam3u_i2c.o [1]
+  .bss                zero     0x20001ce8     0x4  sam3u_i2c.o [1]
+  .bss                zero     0x20001cec     0x4  sam3u_ssp.o [1]
+  .bss                zero     0x20001cf0     0x4  sam3u_ssp.o [1]
+  .bss                zero     0x20001cf4     0x4  sam3u_ssp.o [1]
+  .bss                zero     0x20001cf8     0x4  sam3u_ssp.o [1]
+  .bss                zero     0x20001cfc     0x4  sam3u_ssp.o [1]
+  .bss                zero     0x20001d00     0x4  sam3u_ssp.o [1]
+  .bss                zero     0x20001d04     0x4  sam3u_ssp.o [1]
+  .bss                zero     0x20001d08     0x4  sam3u_ssp.o [1]
+  .bss                zero     0x20001d0c     0x4  sam3u_ssp.o [1]
+  .bss                zero     0x20001d10     0x4  sam3u_ssp.o [1]
+  .bss                zero     0x20001d14     0x4  sam3u_ssp.o [1]
+  .bss                zero     0x20001d18     0x4  sam3u_uart.o [1]
+  .bss                zero     0x20001d1c     0x4  sam3u_uart.o [1]
+  .bss                zero     0x20001d20     0x4  sam3u_uart.o [1]
+  .bss                zero     0x20001d24     0x4  sam3u_uart.o [1]
+  .bss                zero     0x20001d28     0x4  sam3u_uart.o [1]
+  .bss                zero     0x20001d2c     0x4  sam3u_uart.o [1]
+  .bss                zero     0x20001d30     0x4  sam3u_uart.o [1]
+  .bss                zero     0x20001d34     0x4  sam3u_uart.o [1]
+  .bss                zero     0x20001d38     0x4  sam3u_uart.o [1]
+  .bss                zero     0x20001d3c     0x4  sam3u_uart.o [1]
+  .bss                zero     0x20001d40     0x4  shooter-game.o [1]
+  .bss                zero     0x20001d44     0x4  shooter-game.o [1]
+  .bss                zero     0x20001d48     0x4  shooter-game.o [1]
+  .bss                zero     0x20001d4c     0x4  shooter-game.o [1]
+  .bss                zero     0x20001d50     0x4  xgetmemchunk.o [3]
+  .bss                zero     0x20001d54     0x2  buttons.o [1]
+  .bss                zero     0x20001d56     0x2  buttons.o [1]
+  .bss                zero     0x20001d58     0x2  buttons.o [1]
+  .bss                zero     0x20001d5a     0x2  buttons.o [1]
+  .bss                zero     0x20001d5c     0x2  debug.o [1]
+  .bss                zero     0x20001d5e     0x1  ant.o [1]
+  .bss                zero     0x20001d5f     0x1  ant.o [1]
+  .bss                zero     0x20001d60     0x1  ant.o [1]
+  .bss                zero     0x20001d61     0x1  ant.o [1]
+  .bss                zero     0x20001d62     0x1  captouch.o [1]
+  .bss                zero     0x20001d63     0x1  captouch.o [1]
+  .bss                zero     0x20001d64     0x1  debug.o [1]
+  .bss                zero     0x20001d65     0x1  debug.o [1]
+  .bss                zero     0x20001d66     0x1  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001d67     0x1  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001d68     0x1  lcd_NHD-C12864LZ.o [1]
+  .bss                zero     0x20001d69     0x1  messaging.o [1]
+  .bss                zero     0x20001d6a     0x1  sam3u_i2c.o [1]
+  .bss                zero     0x20001d6b     0x1  sam3u_i2c.o [1]
+  .bss                zero     0x20001d6c     0x1  sam3u_i2c.o [1]
+  .bss                zero     0x20001d6d     0x1  sam3u_uart.o [1]
+  .bss                zero     0x20001d6e     0x1  burst_10_AA_BB.o [4]
+  .bss                zero     0x20001d6f     0x1  touch_rs_qt.o [4]
+  HEAP                         0x20001d70  0x2000  <Block>
+    HEAP              uninit   0x20001d70  0x2000  <Block tail>
+                             - 0x20003d70  0x3d70
+
+"P3":                                      0x2000
+  CSTACK                       0x20080000  0x2000  <Block>
+    CSTACK            uninit   0x20080000  0x2000  <Block tail>
+                             - 0x20082000  0x2000
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x18f0:
+          0x20000480  0x18f0
+
+Copy/lz77 (__iar_lz77_init3)
+    1 source range, total size 0x2bb (60% of destination):
+          0x00086c8c   0x2bb
+    1 destination range, total size 0x47e:
+          0x20000000   0x47e
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data
+    ------                 -------  -------  -------
+C:\Users\Jonathan\Desktop\Shooter Game\firmware_mpgl2\iar_7_20_1\Debug\Obj: [1]
+    ant.o                    3 646      451      772
+    board_cstartup_iar.o        20      188
+    buttons.o                  676       22       52
+    captouch.o                 612      118       30
+    debug.o                  1 700      683      445
+    exceptions.o                62
+    interrupts.o               476       34        2
+    lcd_NHD-C12864LZ.o       2 392       27    1 283
+    lcd_bitmaps.o                     1 304
+    leds.o                     656      125      208
+    main.o                     188                 8
+    messaging.o                668        2    3 093
+    mpgl2-ehdw-02.o            964       19       48
+    sam3u_i2c.o              1 536               299
+    sam3u_ssp.o              2 256       30      376
+    sam3u_uart.o             1 400       32      185
+    shooter-game.o           2 232      174       34
+    utilities.o                 60       10       16
+    ------------------------------------------------
+    Total:                  19 544    3 219    6 851
+
+command line: [2]
+    ------------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    abort.o                      6
+    exit.o                       4
+    rand.o                     224       85      140
+    xgetmemchunk.o              44                 4
+    xtls.o                       2
+    xxmemxfree.o               128
+    xxmemxmalloc.o             176                 8
+    ------------------------------------------------
+    Total:                     584       85      152
+
+libsam3u-32qt-k-8rs-iar.a: [4]
+    burst_10_AA_BB.o         1 232                 1
+    calc_masks.o               328
+    touch_api.o                524        1      165
+    touch_burst_qt.o            96                32
+    touch_process.o          1 092               292
+    touch_rs_qt.o              864                41
+    ------------------------------------------------
+    Total:                   4 136        1      531
+
+rt7M_tl.a: [5]
+    ABImemcpy_unaligned.o      118
+    ABImemset.o                102
+    cexit.o                     10
+    cmain.o                     26
+    cstartup_M.o                12
+    data_init.o                 40
+    lz77_init.o                450
+    strlen.o                    54
+    zero_init3.o                34
+    ------------------------------------------------
+    Total:                     846
+
+shb_l.a: [6]
+    exit.o                      20
+    ------------------------------------------------
+    Total:                      20
+
+    Gaps                         6        2        2
+    Linker created                       44   16 384
+----------------------------------------------------
+    Grand Total:            25 136    3 351   23 920
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.intvec$$Base           0x00080000          --   Gb  - Linker created -
+.intvec$$Limit          0x000800bc          --   Gb  - Linker created -
+?main                   0x00086ab9         Code  Gb  cmain.o [5]
+ADCC0_IrqHandler        0x00080f31    0x2  Code  Wk  exceptions.o [1]
+ADCC1_IrqHandler        0x00080f33    0x2  Code  Wk  exceptions.o [1]
+AddNewMessageStatus     0x000822d1   0x34  Code  Lc  messaging.o [1]
+AdvanceAntRxBufferCurrentChar
+                        0x0008043d   0x28  Code  Lc  ant.o [1]
+AdvanceAntRxBufferUnreadMsgPointer
+                        0x00080465   0x28  Code  Lc  ant.o [1]
+AntAbortMessage         0x00080411   0x2c  Code  Lc  ant.o [1]
+AntCalculateTxChecksum  0x000808f7   0x24  Code  Gb  ant.o [1]
+AntDeQueueOutgoingMessage
+                        0x00080caf   0x22  Code  Lc  ant.o [1]
+AntExpectResponse       0x000807b5   0xe4  Code  Gb  ant.o [1]
+AntInitialize           0x0008048d  0x190  Code  Gb  ant.o [1]
+AntProcessMessage       0x00080925  0x284  Code  Lc  ant.o [1]
+AntQueueApplicationMessage
+                        0x00080c09   0xa6  Code  Lc  ant.o [1]
+AntRunActiveState       0x0008061d    0xc  Code  Gb  ant.o [1]
+AntRxFlowControlCallback
+                        0x000808b1   0x46  Code  Gb  ant.o [1]
+AntRxMessage            0x000801cd  0x244  Code  Lc  ant.o [1]
+AntSM_Idle              0x00080ce9   0x96  Code  Gb  ant.o [1]
+AntSM_NoResponse        0x00080ef9    0x2  Code  Gb  ant.o [1]
+AntSM_ReceiveMessage    0x00080d8d   0x18  Code  Gb  ant.o [1]
+AntSM_TransmitMessage   0x00080db5   0x76  Code  Gb  ant.o [1]
+AntSrdyPulse            0x000801a3   0x2a  Code  Lc  ant.o [1]
+AntSyncSerialInitialize
+                        0x000800bd   0xe6  Code  Lc  ant.o [1]
+AntTick                 0x00080bb1   0x42  Code  Lc  ant.o [1]
+AntTxFlowControlCallback
+                        0x00080899   0x16  Code  Gb  ant.o [1]
+AntTxMessage            0x00080629  0x18c  Code  Gb  ant.o [1]
+Ant_DebugProcessRxMessages
+                        0x20001c5c    0x4  Data  Lc  ant.o [1]
+Ant_DebugRxMessageCounter
+                        0x20001c54    0x4  Data  Lc  ant.o [1]
+Ant_DebugTotalRxMessages
+                        0x20001c58    0x4  Data  Lc  ant.o [1]
+Ant_Ssp                 0x20001c3c    0x4  Data  Lc  ant.o [1]
+Ant_au8AntRxBuffer      0x20001480  0x100  Data  Lc  ant.o [1]
+Ant_pfnStateMachine     0x20001c1c    0x4  Data  Lc  ant.o [1]
+Ant_psDataOutgoingMsgList
+                        0x20001c50    0x4  Data  Lc  ant.o [1]
+Ant_pu8AntRxBufferCurrentChar
+                        0x20001c44    0x4  Data  Lc  ant.o [1]
+Ant_pu8AntRxBufferNextChar
+                        0x20001c40    0x4  Data  Lc  ant.o [1]
+Ant_pu8AntRxBufferUnreadMsg
+                        0x20001c48    0x4  Data  Lc  ant.o [1]
+Ant_sSspConfig          0x20001a94   0x24  Data  Lc  ant.o [1]
+Ant_u32ApplicationMessageCount
+                        0x20001c4c    0x4  Data  Lc  ant.o [1]
+Ant_u32CurrentTxMessageToken
+                        0x20001c38    0x4  Data  Lc  ant.o [1]
+Ant_u32RxByteCounter    0x20001c2c    0x4  Data  Lc  ant.o [1]
+Ant_u32RxTimeoutCounter
+                        0x20001c30    0x4  Data  Lc  ant.o [1]
+Ant_u32RxTimer          0x20001c20    0x4  Data  Lc  ant.o [1]
+Ant_u32TxByteCounter    0x20001c28    0x4  Data  Lc  ant.o [1]
+Ant_u32TxTimer          0x20001c24    0x4  Data  Lc  ant.o [1]
+Ant_u32UnexpectedByteCounter
+                        0x20001c34    0x4  Data  Lc  ant.o [1]
+Ant_u8AntNewRxMessages  0x20001d5e    0x1  Data  Lc  ant.o [1]
+Ant_u8AntVersion        0x20001be0    0xc  Data  Lc  ant.o [1]
+Ant_u8SlaveMissedMessageHigh
+                        0x20001d5f    0x1  Data  Lc  ant.o [1]
+Ant_u8SlaveMissedMessageLow
+                        0x20001d61    0x1  Data  Lc  ant.o [1]
+Ant_u8SlaveMissedMessageMid
+                        0x20001d60    0x1  Data  Lc  ant.o [1]
+Bsp_u32TimingViolationsCounter
+                        0x20001ccc    0x4  Data  Lc  mpgl2-ehdw-02.o [1]
+BusFault_Handler        0x00080f01    0x2  Code  Wk  exceptions.o [1]
+ButtonAcknowledge       0x00083f5d    0x8  Code  Gb  buttons.o [1]
+ButtonInitialize        0x00083f65   0xb0  Code  Gb  buttons.o [1]
+ButtonRunActiveState    0x00084015    0xa  Code  Gb  buttons.o [1]
+ButtonSM_ButtonActive   0x00084065   0xfc  Code  Lc  buttons.o [1]
+ButtonSM_Idle           0x00084045   0x20  Code  Lc  buttons.o [1]
+Button_abNewPress       0x20001d5a    0x2  Data  Lc  buttons.o [1]
+Button_aeCurrentState   0x20001d56    0x2  Data  Lc  buttons.o [1]
+Button_aeNewState       0x20001d58    0x2  Data  Lc  buttons.o [1]
+Button_au32ButtonPins   0x00086c58    0x8  Data  Lc  buttons.o [1]
+Button_au32HoldTimeStart
+                        0x20001bf4    0x8  Data  Lc  buttons.o [1]
+Button_pfnStateMachine  0x20001c60    0x4  Data  Lc  buttons.o [1]
+Buttons_asArray         0x2000045c    0x4  Data  Lc  buttons.o [1]
+CSTACK$$Base            0x20080000          --   Gb  - Linker created -
+CSTACK$$Limit           0x20082000          --   Gb  - Linker created -
+CapTouchInitialize      0x000841db   0x82  Code  Gb  captouch.o [1]
+CapTouchOff             0x000841bf   0x16  Code  Gb  captouch.o [1]
+CapTouchOn              0x000841b5    0xa  Code  Gb  captouch.o [1]
+CapTouchRunActiveState  0x0008425d    0xa  Code  Gb  captouch.o [1]
+CapTouchSM_Idle         0x00084351    0x2  Code  Gb  captouch.o [1]
+CapTouchSM_Measure      0x00084355   0x72  Code  Gb  captouch.o [1]
+CapTouchSetParameters   0x000842f7   0x2c  Code  Lc  captouch.o [1]
+CapTouchUpdateSensorReadings
+                        0x00084323   0x22  Code  Gb  captouch.o [1]
+CapTouchVerify          0x00084267   0x90  Code  Lc  captouch.o [1]
+CapTouch_pfnStateMachine
+                        0x20001c64    0x4  Data  Gb  captouch.o [1]
+CapTouch_u32Timer       0x20001c68    0x4  Data  Gb  captouch.o [1]
+CapTouch_u8CurrentHSliderValue
+                        0x20001d62    0x1  Data  Gb  captouch.o [1]
+CapTouch_u8CurrentVSliderValue
+                        0x20001d63    0x1  Data  Gb  captouch.o [1]
+CaptouchCurrentVSlidePosition
+                        0x000841d5    0x6  Code  Gb  captouch.o [1]
+CenterGun               0x000837fd  0x114  Code  Gb  shooter-game.o [1]
+ClockSetup              0x00084419   0x7a  Code  Gb  mpgl2-ehdw-02.o [1]
+DBGU_IrqHandler         0x00082649   0x1e  Code  Gb  sam3u_uart.o [1]
+DeQueueMessage          0x000821e3   0x56  Code  Gb  messaging.o [1]
+DebugCommandCaptouchValuesToggle
+                        0x000813f3   0x46  Code  Lc  debug.o [1]
+DebugCommandDummy       0x000812dd   0x1a  Code  Lc  debug.o [1]
+DebugCommandLedTestToggle
+                        0x000812f7   0x56  Code  Lc  debug.o [1]
+DebugCommandPrepareList
+                        0x00081245   0x98  Code  Lc  debug.o [1]
+DebugCommandSysTimeToggle
+                        0x000813ad   0x46  Code  Lc  debug.o [1]
+DebugInitialize         0x00081171   0x9e  Code  Gb  debug.o [1]
+DebugLedTestCharacter   0x0008134d   0x60  Code  Lc  debug.o [1]
+DebugLineFeed           0x00081031   0x1c  Code  Gb  debug.o [1]
+DebugMon_Handler        0x00080f07    0x2  Code  Wk  exceptions.o [1]
+DebugPrintNumber        0x0008104d   0xb0  Code  Gb  debug.o [1]
+DebugPrintf             0x0008100d   0x24  Code  Gb  debug.o [1]
+DebugRunActiveState     0x0008120f    0xc  Code  Gb  debug.o [1]
+DebugRxCallback         0x0008121d   0x28  Code  Gb  debug.o [1]
+DebugSM_CheckCmd        0x00081521   0xb2  Code  Lc  debug.o [1]
+DebugSM_Error           0x000815ed   0x34  Code  Lc  debug.o [1]
+DebugSM_Idle            0x00081439   0xe8  Code  Lc  debug.o [1]
+DebugSM_ProcessCmd      0x000815d5   0x18  Code  Lc  debug.o [1]
+Debug_Uart              0x20001c78    0x4  Data  Lc  debug.o [1]
+Debug_au8CommandBuffer  0x20001990   0x40  Data  Lc  debug.o [1]
+Debug_au8Commands       0x200001e4   0x40  Data  Gb  debug.o [1]
+Debug_au8RxBuffer       0x20001810   0x80  Data  Lc  debug.o [1]
+Debug_au8StartupMsg     0x20000160   0x44  Data  Lc  debug.o [1]
+Debug_bLedTestActive    0x2000047c    0x1  Data  Lc  debug.o [1]
+Debug_pfnStateMachine   0x20001c74    0x4  Data  Lc  debug.o [1]
+Debug_pu8CmdBufferNextChar
+                        0x20001c88    0x4  Data  Lc  debug.o [1]
+Debug_pu8RxBufferNextChar
+                        0x20001c80    0x4  Data  Lc  debug.o [1]
+Debug_pu8RxBufferParser
+                        0x20001c84    0x4  Data  Lc  debug.o [1]
+Debug_u16CommandSize    0x20001d5c    0x2  Data  Lc  debug.o [1]
+Debug_u32CurrentMessageToken
+                        0x20001c7c    0x4  Data  Lc  debug.o [1]
+Debug_u8Command         0x20001d65    0x1  Data  Lc  debug.o [1]
+Debug_u8ErrorCode       0x20001d64    0x1  Data  Lc  debug.o [1]
+EFC0_IrqHandler         0x00080f17    0x2  Code  Wk  exceptions.o [1]
+EFC1_IrqHandler         0x00080f19    0x2  Code  Wk  exceptions.o [1]
+Fire                    0x00083667  0x196  Code  Gb  shooter-game.o [1]
+G_aau8BigFonts          0x000865c0  0x118  Data  Gb  lcd_bitmaps.o [1]
+G_aau8LcdRamImage       0x20000d80  0x400  Data  Gb  lcd_NHD-C12864LZ.o [1]
+G_aau8SmallFonts        0x00085cc0  0x2a0  Data  Gb  lcd_bitmaps.o [1]
+G_abButtonDebounceActive
+                        0x20001d54    0x2  Data  Gb  buttons.o [1]
+G_au32ButtonDebounceTimeStart
+                        0x20001bec    0x8  Data  Gb  buttons.o [1]
+G_au8AntMessageAssign   0x20000384   0x14  Data  Gb  ant.o [1]
+G_au8AntMessageClose    0x20000398   0x14  Data  Gb  ant.o [1]
+G_au8AntMessageFail     0x20000434    0x8  Data  Gb  ant.o [1]
+G_au8AntMessageInit     0x2000030c   0x18  Data  Gb  ant.o [1]
+G_au8AntMessageInitFail
+                        0x20000258   0x20  Data  Gb  ant.o [1]
+G_au8AntMessageNoAnt    0x200001a4   0x40  Data  Gb  ant.o [1]
+G_au8AntMessageOk       0x2000042c    0x8  Data  Gb  ant.o [1]
+G_au8AntMessageOpen     0x200003ac   0x14  Data  Gb  ant.o [1]
+G_au8AntMessageUnassign
+                        0x200002f4   0x18  Data  Gb  ant.o [1]
+G_au8AntMessageUnhandled
+                        0x200002d8   0x1c  Data  Gb  ant.o [1]
+G_au8MessageOFF         0x20000454    0x8  Data  Gb  utilities.o [1]
+G_au8MessageON          0x2000044c    0x8  Data  Gb  utilities.o [1]
+G_sAntApplicationMsgList
+                        0x20001c18    0x4  Data  Gb  ant.o [1]
+G_sLcdClearWholeScreen  0x20000444    0x8  Data  Gb  lcd_NHD-C12864LZ.o [1]
+G_stAntSetupData        0x20001bd4    0xc  Data  Gb  ant.o [1]
+G_u32AntFlags           0x20001c14    0x4  Data  Gb  ant.o [1]
+G_u32ApplicationFlags   0x20001cb0    0x4  Data  Gb  main.o [1]
+G_u32DebugFlags         0x20001c70    0x4  Data  Gb  debug.o [1]
+G_u32MessagingFlags     0x20001cb4    0x4  Data  Gb  messaging.o [1]
+G_u32Ssp1ApplicationFlags
+                        0x20001cec    0x4  Data  Gb  sam3u_ssp.o [1]
+G_u32Ssp2ApplicationFlags
+                        0x20001cf0    0x4  Data  Gb  sam3u_ssp.o [1]
+G_u32SystemFlags        0x20001cac    0x4  Data  Gb  main.o [1]
+G_u32SystemTime1ms      0x20001cc4    0x4  Data  Gb  mpgl2-ehdw-02.o [1]
+G_u32SystemTime1s       0x20001cc8    0x4  Data  Gb  mpgl2-ehdw-02.o [1]
+G_u32Uart0ApplicationFlags
+                        0x20001d1c    0x4  Data  Gb  sam3u_uart.o [1]
+G_u32UartApplicationFlags
+                        0x20001d18    0x4  Data  Gb  sam3u_uart.o [1]
+GameOver                0x00083db1   0x14  Code  Lc  shooter-game.o [1]
+GetButtonBitLocation    0x0008401f   0x26  Code  Gb  buttons.o [1]
+GpioSetup               0x0008453d   0xfe  Code  Gb  mpgl2-ehdw-02.o [1]
+HDMA_IrqHandler         0x00080f35    0x2  Code  Wk  exceptions.o [1]
+HEAP$$Base              0x20001d70          --   Gb  - Linker created -
+HEAP$$Limit             0x20003d70          --   Gb  - Linker created -
+HSMC4_IrqHandler        0x00080f1b    0x2  Code  Wk  exceptions.o [1]
+HardFault_Handler       0x00085fd3   0x4c  Code  Gb  interrupts.o [1]
+InStream_Read           0x0008613d   0x22  Code  Lc  lz77_init.o [5]
+InterruptSetup          0x00085f89   0x4a  Code  Gb  interrupts.o [1]
+IrqHandlerNotUsed       0x00080efb    0x2  Code  Gb  exceptions.o [1]
+IsButtonPressed         0x00083f39   0x12  Code  Gb  buttons.o [1]
+IsTimeUp                0x00080f39   0x38  Code  Gb  utilities.o [1]
+LcdClearPixel           0x00082cbf   0x3e  Code  Gb  lcd_NHD-C12864LZ.o [1]
+LcdClearPixels          0x00082e6f   0xac  Code  Gb  lcd_NHD-C12864LZ.o [1]
+LcdClearScreen          0x00082f1b   0x34  Code  Gb  lcd_NHD-C12864LZ.o [1]
+LcdCommand              0x00082f4f   0x58  Code  Gb  lcd_NHD-C12864LZ.o [1]
+LcdInitialize           0x00082fa7  0x1ba  Code  Gb  lcd_NHD-C12864LZ.o [1]
+LcdLoadBitmap           0x00082cfd  0x172  Code  Gb  lcd_NHD-C12864LZ.o [1]
+LcdLoadPageToBuffer     0x00083221   0xc4  Code  Lc  lcd_NHD-C12864LZ.o [1]
+LcdLoadString           0x00082be9   0x90  Code  Gb  lcd_NHD-C12864LZ.o [1]
+LcdManualMode           0x0008316d   0x4e  Code  Gb  lcd_NHD-C12864LZ.o [1]
+LcdRunActiveState       0x00083161    0xc  Code  Gb  lcd_NHD-C12864LZ.o [1]
+LcdSM_Idle              0x00083385   0xc8  Code  Lc  lcd_NHD-C12864LZ.o [1]
+LcdSM_WaitTransfer      0x0008344d   0x74  Code  Lc  lcd_NHD-C12864LZ.o [1]
+LcdSetPixel             0x00082c79   0x46  Code  Gb  lcd_NHD-C12864LZ.o [1]
+LcdSetStartAddressForDataTransfer
+                        0x000831bb   0x66  Code  Lc  lcd_NHD-C12864LZ.o [1]
+LcdUpdateScreenRefreshArea
+                        0x000832e5   0x9c  Code  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_ReturnState         0x20001c9c    0x4  Data  Gb  lcd_NHD-C12864LZ.o [1]
+Lcd_Ssp                 0x20001ca4    0x4  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_au8MessageInit      0x20000408    0xc  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_au8MessageWelcome   0x20000414    0xc  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_au8RxDummyBuffer    0x20001d68    0x1  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_au8SetupArray       0x20000420    0xc  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_au8TxBuffer         0x20001890   0x80  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_pfnStateMachine     0x20001c8c    0x4  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_pu8RxDummyBuffer    0x20001ca8    0x4  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_sCurrentUpdateArea  0x20001c04    0x8  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_sSspConfig          0x20001ab8   0x24  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_sUpdateArea         0x20001bfc    0x8  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_u32CurrentMsgToken  0x20001ca0    0x4  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_u32Flags            0x20001c90    0x4  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_u32RefreshTimer     0x20001c98    0x4  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_u32Timer            0x20001c94    0x4  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_u8CurrentPage       0x20001d67    0x1  Data  Lc  lcd_NHD-C12864LZ.o [1]
+Lcd_u8PagesToUpdate     0x20001d66    0x1  Data  Lc  lcd_NHD-C12864LZ.o [1]
+LedInitialize           0x00082997   0x3e  Code  Gb  leds.o [1]
+LedOff                  0x0008291d   0x58  Code  Gb  leds.o [1]
+LedOn                   0x000828c5   0x58  Code  Gb  leds.o [1]
+LedToggle               0x00082975   0x22  Code  Gb  leds.o [1]
+LedUpdate               0x000829d5  0x162  Code  Gb  leds.o [1]
+Led_au32BitPositions    0x20000224   0x34  Data  Lc  leds.o [1]
+Leds_asLedArray         0x2000008c   0x84  Data  Lc  leds.o [1]
+MCI0_IrqHandler         0x00080f21    0x2  Code  Wk  exceptions.o [1]
+MemManage_Handler       0x00080eff    0x2  Code  Wk  exceptions.o [1]
+Menu                    0x00083911   0x2c  Code  Lc  shooter-game.o [1]
+MessagingIdle           0x00082305   0x1c  Code  Gb  messaging.o [1]
+MessagingInitialize     0x00082239   0x72  Code  Gb  messaging.o [1]
+MessagingRunActiveState
+                        0x000822ab    0xa  Code  Gb  messaging.o [1]
+Messaging_pfnStateMachine
+                        0x20001cb8    0x4  Data  Lc  messaging.o [1]
+Msg_Pool                0x20000480  0x900  Data  Lc  messaging.o [1]
+Msg_StatusQueue         0x20001180  0x300  Data  Lc  messaging.o [1]
+Msg_pNextStatus         0x20001cc0    0x4  Data  Lc  messaging.o [1]
+Msg_u32Token            0x20001cbc    0x4  Data  Lc  messaging.o [1]
+Msg_u8QueuedMessageCount
+                        0x20001d69    0x1  Data  Lc  messaging.o [1]
+NMI_Handler             0x00080efd    0x2  Code  Wk  exceptions.o [1]
+NVIC_ClearPendingIRQ    0x00083f25   0x14  Code  Lc  buttons.o [1]
+NVIC_ClearPendingIRQ    0x00085f75   0x14  Code  Lc  interrupts.o [1]
+NVIC_ClearPendingIRQ    0x00085207   0x16  Code  Lc  sam3u_i2c.o [1]
+NVIC_ClearPendingIRQ    0x000816c7   0x16  Code  Lc  sam3u_ssp.o [1]
+NVIC_ClearPendingIRQ    0x00082363   0x16  Code  Lc  sam3u_uart.o [1]
+NVIC_DisableIRQ         0x00085f61   0x14  Code  Lc  interrupts.o [1]
+NVIC_EnableIRQ          0x00083f11   0x14  Code  Lc  buttons.o [1]
+NVIC_EnableIRQ          0x000851f1   0x16  Code  Lc  sam3u_i2c.o [1]
+NVIC_EnableIRQ          0x000816b1   0x16  Code  Lc  sam3u_ssp.o [1]
+NVIC_EnableIRQ          0x0008234d   0x16  Code  Lc  sam3u_uart.o [1]
+OutStream_Write         0x0008615f   0x40  Code  Lc  lz77_init.o [5]
+PIOA_IrqHandler         0x0008605b   0x54  Code  Gb  interrupts.o [1]
+PIOB_IrqHandler         0x000860af   0x56  Code  Gb  interrupts.o [1]
+PIOC_IrqHandler         0x00080f1d    0x2  Code  Wk  exceptions.o [1]
+PMC_IrqHandler          0x00080f15    0x2  Code  Wk  exceptions.o [1]
+PWMAudioOff             0x00084671    0x6  Code  Gb  mpgl2-ehdw-02.o [1]
+PWMSetupAudio           0x0008463b   0x36  Code  Gb  mpgl2-ehdw-02.o [1]
+PWM_IrqHandler          0x00080f2f    0x2  Code  Wk  exceptions.o [1]
+PendSV_Handler          0x00080f09    0x2  Code  Wk  exceptions.o [1]
+PlaceObject             0x0008363d   0x2a  Code  Gb  shooter-game.o [1]
+PlaceObjectR            0x00083601   0x3c  Code  Gb  shooter-game.o [1]
+QueryMessageStatus      0x000820b1   0x38  Code  Gb  messaging.o [1]
+QueueMessage            0x000820e9   0xfa  Code  Gb  messaging.o [1]
+RSTC_IrqHandler         0x00080f0d    0x2  Code  Wk  exceptions.o [1]
+RTC_IrqHandler          0x00080f0f    0x2  Code  Wk  exceptions.o [1]
+RTT_IrqHandler          0x00080f11    0x2  Code  Wk  exceptions.o [1]
+Region$$Table$$Base     0x000869f8          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00086a24          --   Gb  - Linker created -
+SNSK_array              0x20001ba0   0x10  Data  Gb  touch_burst_qt.o [4]
+SNS_array               0x20001b90   0x10  Data  Gb  touch_burst_qt.o [4]
+SPI0_IrqHandler         0x00080f25    0x2  Code  Wk  exceptions.o [1]
+SSC0_IrqHandler         0x00080f27    0x2  Code  Wk  exceptions.o [1]
+SSP_Peripheral0         0x200019d0   0x34  Data  Lc  sam3u_ssp.o [1]
+SSP_Peripheral1         0x20001a04   0x34  Data  Lc  sam3u_ssp.o [1]
+SSP_Peripheral2         0x20001a38   0x34  Data  Lc  sam3u_ssp.o [1]
+SSP_au8Dummies          0x20001910   0x80  Data  Lc  sam3u_ssp.o [1]
+SSP_psCurrentISR        0x20001d04    0x4  Data  Lc  sam3u_ssp.o [1]
+SSP_psCurrentSsp        0x20001d00    0x4  Data  Lc  sam3u_ssp.o [1]
+SSP_pu32SspApplicationFlagsISR
+                        0x20001d08    0x4  Data  Lc  sam3u_ssp.o [1]
+SSP_u32AntCounter       0x20001d14    0x4  Data  Lc  sam3u_ssp.o [1]
+SSP_u32Flags            0x20001cfc    0x4  Data  Lc  sam3u_ssp.o [1]
+SSP_u32Int1Count        0x20001d0c    0x4  Data  Lc  sam3u_ssp.o [1]
+SSP_u32Int2Count        0x20001d10    0x4  Data  Lc  sam3u_ssp.o [1]
+SSP_u32Timer            0x20001cf8    0x4  Data  Lc  sam3u_ssp.o [1]
+SUPC_IrqHandler         0x00080f0b    0x2  Code  Wk  exceptions.o [1]
+SVC_Handler             0x00080f05    0x2  Code  Wk  exceptions.o [1]
+ShooterGame             0x0008393d  0x474  Code  Lc  shooter-game.o [1]
+ShooterGameInitialize   0x00083579   0x7c  Code  Gb  shooter-game.o [1]
+ShooterGameRunActiveState
+                        0x000835f5    0xc  Code  Gb  shooter-game.o [1]
+ShooterGame_StateMachine
+                        0x20001d40    0x4  Data  Lc  shooter-game.o [1]
+SspGenericHandler       0x000819fb  0x352  Code  Gb  sam3u_ssp.o [1]
+SspInitialize           0x00081855   0xfe  Code  Gb  sam3u_ssp.o [1]
+SspManualMode           0x0008195f   0x48  Code  Gb  sam3u_ssp.o [1]
+SspRequest              0x000816dd  0x148  Code  Gb  sam3u_ssp.o [1]
+SspRunActiveState       0x00081953    0xc  Code  Gb  sam3u_ssp.o [1]
+SspSM_Idle              0x00081d4d  0x1c0  Code  Gb  sam3u_ssp.o [1]
+SspWriteData            0x00081825   0x30  Code  Gb  sam3u_ssp.o [1]
+Ssp_pfnStateMachine     0x20001cf4    0x4  Data  Lc  sam3u_ssp.o [1]
+SysTickSetup            0x00084493   0x22  Code  Gb  mpgl2-ehdw-02.o [1]
+SysTick_Handler         0x0008601f   0x3c  Code  Gb  interrupts.o [1]
+SystemSleep             0x000844b5   0x7a  Code  Gb  mpgl2-ehdw-02.o [1]
+SystemStatusReport      0x000810fd   0x74  Code  Gb  debug.o [1]
+TC0_IrqHandler          0x00080f29    0x2  Code  Wk  exceptions.o [1]
+TC1_IrqHandler          0x00080f2b    0x2  Code  Wk  exceptions.o [1]
+TC2_IrqHandler          0x00080f2d    0x2  Code  Wk  exceptions.o [1]
+TWI0                    0x20001ce0    0x4  Data  Lc  sam3u_i2c.o [1]
+TWI0FillTxBuffer        0x0008532b   0x96  Code  Lc  sam3u_i2c.o [1]
+TWI0_IrqHandler         0x000853c1   0xb8  Code  Gb  sam3u_i2c.o [1]
+TWI1_IrqHandler         0x00080f23    0x2  Code  Wk  exceptions.o [1]
+TWIInitialize           0x0008521d  0x102  Code  Gb  sam3u_i2c.o [1]
+TWIRunActiveState       0x0008531f    0xc  Code  Gb  sam3u_i2c.o [1]
+TWISM_Error             0x0008570d   0x94  Code  Gb  sam3u_i2c.o [1]
+TWISM_Idle              0x0008547d  0x142  Code  Gb  sam3u_i2c.o [1]
+TWISM_Receiving         0x00085695   0x78  Code  Gb  sam3u_i2c.o [1]
+TWISM_Transmitting      0x000855c1   0xd2  Code  Gb  sam3u_i2c.o [1]
+TWI_MessageBuffer       0x20001580  0x100  Data  Lc  sam3u_i2c.o [1]
+TWI_MessageBufferCurIndex
+                        0x20001d6b    0x1  Data  Lc  sam3u_i2c.o [1]
+TWI_MessageBufferNextIndex
+                        0x20001d6a    0x1  Data  Lc  sam3u_i2c.o [1]
+TWI_MessageQueueLength  0x20001d6c    0x1  Data  Lc  sam3u_i2c.o [1]
+TWI_Peripheral0         0x20001bc4   0x10  Data  Lc  sam3u_i2c.o [1]
+TWI_StateMachine        0x20001cd4    0x4  Data  Lc  sam3u_i2c.o [1]
+TWI_pu8CurrentTxData    0x20001ce8    0x4  Data  Lc  sam3u_i2c.o [1]
+TWI_u32CurrentBytesRemaining
+                        0x20001ce4    0x4  Data  Lc  sam3u_i2c.o [1]
+TWI_u32Flags            0x20001cdc    0x4  Data  Lc  sam3u_i2c.o [1]
+TWI_u32Timer            0x20001cd8    0x4  Data  Lc  sam3u_i2c.o [1]
+UART_Peripheral         0x20001adc   0x24  Data  Lc  sam3u_uart.o [1]
+UART_Peripheral0        0x20001b00   0x24  Data  Lc  sam3u_uart.o [1]
+UART_Peripheral1        0x20001b24   0x24  Data  Lc  sam3u_uart.o [1]
+UART_Peripheral2        0x20001b48   0x24  Data  Lc  sam3u_uart.o [1]
+UART_psCurrentISR       0x20001d30    0x4  Data  Lc  sam3u_uart.o [1]
+UART_psCurrentUart      0x20001d2c    0x4  Data  Lc  sam3u_uart.o [1]
+UART_pu32ApplicationFlagsISR
+                        0x20001d34    0x4  Data  Lc  sam3u_uart.o [1]
+UART_u32Flags           0x20001d28    0x4  Data  Lc  sam3u_uart.o [1]
+UART_u32Int0Count       0x20001d3c    0x4  Data  Lc  sam3u_uart.o [1]
+UART_u32IntCount        0x20001d38    0x4  Data  Lc  sam3u_uart.o [1]
+UART_u32Timer           0x20001d24    0x4  Data  Lc  sam3u_uart.o [1]
+UART_u8ActiveUarts      0x20001d6d    0x1  Data  Lc  sam3u_uart.o [1]
+UDPD_IrqHandler         0x00080f37    0x2  Code  Wk  exceptions.o [1]
+USART0_IrqHandler       0x00082667   0x1e  Code  Gb  sam3u_uart.o [1]
+USART1_IrqHandler       0x000819a7   0x2a  Code  Gb  sam3u_ssp.o [1]
+USART2_IrqHandler       0x000819d1   0x2a  Code  Gb  sam3u_ssp.o [1]
+USART3_IrqHandler       0x00080f1f    0x2  Code  Wk  exceptions.o [1]
+UartGenericHandler      0x00082685   0xf4  Code  Gb  sam3u_uart.o [1]
+UartInitialize          0x0008250d   0xfc  Code  Gb  sam3u_uart.o [1]
+UartManualMode          0x00082613   0x36  Code  Lc  sam3u_uart.o [1]
+UartRequest             0x00082379  0x138  Code  Gb  sam3u_uart.o [1]
+UartRunActiveState      0x00082609    0xa  Code  Gb  sam3u_uart.o [1]
+UartSM_Idle             0x0008277d   0xd8  Code  Gb  sam3u_uart.o [1]
+UartWriteByte           0x000824b1   0x30  Code  Gb  sam3u_uart.o [1]
+UartWriteData           0x000824e1   0x2c  Code  Gb  sam3u_uart.o [1]
+Uart_pfnStateMachine    0x20001d20    0x4  Data  Lc  sam3u_uart.o [1]
+UpdateMessageStatus     0x000822b5   0x1c  Code  Gb  messaging.o [1]
+UsageFault_Handler      0x00080f03    0x2  Code  Wk  exceptions.o [1]
+WDT_IrqHandler          0x00080f13    0x2  Code  Wk  exceptions.o [1]
+WasButtonPressed        0x00083f4b   0x12  Code  Gb  buttons.o [1]
+WatchDogSetup           0x0008452f    0xe  Code  Gb  mpgl2-ehdw-02.o [1]
+_Rand_idx               0x20000008    0x4  Data  Lc  rand.o [3]
+_Rand_rv                0x2000000c   0x80  Data  Lc  rand.o [3]
+_Randinit               0x20000000    0x1  Data  Gb  rand.o [3]
+_Randseed               0x20000004    0x4  Data  Gb  rand.o [3]
+__ICFEDIT_intvec_start__ {Abs}
+                        0x00080000          --   Gb  command line/config [2]
+__aeabi_memset          0x00082b55         Code  Gb  ABImemset.o [5]
+__as_entries_start      0xffffffff          --   Gb  command line/config [2]
+__as_table_start        0xffffffff          --   Gb  command line/config [2]
+__cmain                 0x00086ab9         Code  Gb  cmain.o [5]
+__data_Aldata           0x20001c0c    0x8  Data  Gb  xxmemxmalloc.o [3]
+__data_GetMemChunk      0x00082bbd   0x2c  Code  Gb  xgetmemchunk.o [3]
+__exit                  0x00086305   0x14  Code  Gb  exit.o [6]
+__iar_Memset            0x00082b55         Code  Gb  ABImemset.o [5]
+__iar_Memset_word       0x00082b5d         Code  Gb  ABImemset.o [5]
+__iar_data_init3        0x00086845   0x28  Code  Gb  data_init.o [5]
+__iar_dlib_perthread_access
+                        0x000847dd    0x2  Code  Gb  xtls.o [3]
+__iar_lz77_init3        0x0008619f  0x160  Code  Gb  lz77_init.o [5]
+__iar_program_start     0x00086c45         Code  Gb  cstartup_M.o [5]
+__iar_unaligned___aeabi_memcpy
+                        0x00080f75         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned___aeabi_memcpy4
+                        0x00080f95         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned___aeabi_memcpy8
+                        0x00080f95         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_zero_init3        0x00080feb   0x22  Code  Gb  zero_init3.o [5]
+__low_level_init        0x00086ad5   0x14  Code  Gb  board_cstartup_iar.o [1]
+__vector_table          0x00080000   0xbc  Data  Gb  board_cstartup_iar.o [1]
+_call_main              0x00086ac5         Code  Gb  cmain.o [5]
+_exit                   0x00086aed         Code  Gb  cexit.o [5]
+_main                   0x00086acf         Code  Gb  cmain.o [5]
+aau8EngenuicsLogoBlack  0x00086318  0x160  Data  Gb  lcd_bitmaps.o [1]
+abort                   0x000862ff    0x6  Code  Gb  abort.o [3]
+burst                   0x000851bb   0x2e  Code  Gb  touch_burst_qt.o [4]
+burst_10_AA_BB          0x000857f1  0x4d0  Code  Gb  burst_10_AA_BB.o [4]
+burst_init              0x00085191    0xa  Code  Gb  touch_burst_qt.o [4]
+burst_proc              0x20001bc0    0x4  Data  Gb  touch_api.o [4]
+burst_reset             0x0008519b   0x20  Code  Gb  touch_burst_qt.o [4]
+calc_masks              0x00086479  0x148  Code  Gb  calc_masks.o [4]
+calc_rotor_slider_sensor_delta
+                        0x00084a55   0x4e  Code  Gb  touch_rs_qt.o [4]
+calc_rotor_slider_value
+                        0x00084b01  0x1b4  Code  Gb  touch_rs_qt.o [4]
+calibrate_sensor        0x00084dab   0x60  Code  Lc  touch_process.o [4]
+dht_counter             0x20001b6d    0x1  Data  Gb  touch_process.o [4]
+divide                  0x00084aa3   0x5e  Code  Lc  touch_rs_qt.o [4]
+drift_channel           0x00084e0b   0x80  Code  Lc  touch_process.o [4]
+drift_pos_recal_ctrs    0x20001b70   0x20  Data  Lc  touch_process.o [4]
+exit                    0x00086ae9    0x4  Code  Gb  exit.o [3]
+fill_out_rotor_slider_deltas
+                        0x00084ccd   0x64  Code  Lc  touch_rs_qt.o [4]
+free                    0x00082031   0x7a  Code  Gb  xxmemxfree.o [3]
+freq_shift              0x2000047d    0x1  Data  Gb  touch_api.o [4]
+get_channel_delta       0x00085169   0x14  Code  Gb  touch_process.o [4]
+goto_no_detect          0x00084d69   0x42  Code  Lc  touch_process.o [4]
+lib_status_flags        0x2000180c    0x2  Data  Gb  touch_api.o [4]
+main                    0x000866d9   0xbc  Code  Gb  main.o [1]
+malloc                  0x00081f81   0xac  Code  Gb  xxmemxmalloc.o [3]
+num_rotors_sliders      0x20001d6f    0x1  Data  Gb  touch_rs_qt.o [4]
+num_sensors             0x20001b6c    0x1  Data  Gb  touch_process.o [4]
+process_sensor          0x00084e8b  0x2de  Code  Gb  touch_process.o [4]
+q_get_PRIMASK           0x000849dd    0x8  Code  Gb  touch_api.o [4]
+q_set_PRIMASK           0x000849e5    0x8  Code  Gb  touch_api.o [4]
+qt_calibrate_sensing    0x00084823   0x1c  Code  Gb  touch_api.o [4]
+qt_config_data          0x20001bb0    0x8  Data  Gb  touch_api.o [4]
+qt_enable_slider        0x000849ed   0x5c  Code  Gb  touch_rs_qt.o [4]
+qt_filter_callback      0x20001bbc    0x4  Data  Gb  touch_api.o [4]
+qt_get_library_sig      0x00084811   0x12  Code  Gb  touch_api.o [4]
+qt_get_sensor_delta     0x00084957   0x68  Code  Gb  touch_api.o [4]
+qt_init_sensing_with_burst
+                        0x000847e1   0x30  Code  Gb  touch_api.o [4]
+qt_measure_data         0x20001780   0x8c  Data  Gb  touch_api.o [4]
+qt_measure_sensors      0x00084871   0xe6  Code  Gb  touch_api.o [4]
+qt_reset_sensing        0x0008483f   0x32  Code  Gb  touch_api.o [4]
+rand                    0x00083e31   0xe0  Code  Gb  rand.o [3]
+rotor_slider_deltas     0x20001a8c    0x8  Data  Lc  touch_rs_qt.o [4]
+rotor_slider_enter_detect
+                        0x00084cb5   0x18  Code  Gb  touch_rs_qt.o [4]
+rotors_sliders          0x20001a6c   0x20  Data  Lc  touch_rs_qt.o [4]
+sensors                 0x20001680  0x100  Data  Gb  touch_process.o [4]
+start_cal_sensor        0x00084d4d   0x1c  Code  Gb  touch_process.o [4]
+strlen                  0x00083541         Code  Gb  strlen.o [5]
+time_of_last_call_ms    0x20001bb8    0x2  Data  Lc  touch_api.o [4]
+timer_prescale          0x2000180e    0x2  Data  Lc  touch_api.o [4]
+u8CapTouchGetSliderValue
+                        0x00084345    0xc  Code  Gb  captouch.o [1]
+
+
+[1] = C:\Users\Jonathan\Desktop\Shooter Game\firmware_mpgl2\iar_7_20_1\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = libsam3u-32qt-k-8rs-iar.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  25 136 bytes of readonly  code memory
+   3 351 bytes of readonly  data memory
+  23 920 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
